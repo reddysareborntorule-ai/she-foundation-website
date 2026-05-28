@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>She Can Foundation</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#fdf7ff;
+      color:#333;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:#7b2cbf;
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h1{
+      font-size:28px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffd6ff;
+    }
+
+    /* HOME SECTION */
+
+    .home{
+      min-height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:40px;
+      background:linear-gradient(to right,#f3d9fa,#e0c3fc);
+    }
+
+    .home-content h2{
+      font-size:50px;
+      color:#5a189a;
+      margin-bottom:20px;
+      animation:fadeIn 2s ease;
+    }
+
+    .home-content p{
+      max-width:700px;
+      margin:auto;
+      font-size:20px;
+      line-height:1.8;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#7b2cbf;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .btn:hover{
+      background:#5a189a;
+      transform:scale(1.05);
+    }
+
+    /* ABOUT SECTION */
+
+    .about{
+      padding:80px 10%;
+      text-align:center;
+    }
+
+    .about h2{
+      font-size:40px;
+      color:#7b2cbf;
+      margin-bottom:20px;
+    }
+
+    .about p{
+      font-size:18px;
+      line-height:1.8;
+      max-width:900px;
+      margin:auto;
+    }
+
+    /* IMAGE SECTION */
+
+    .image-section{
+      display:flex;
+      justify-content:center;
+      padding:30px;
+    }
+
+    .image-section img{
+      width:80%;
+      max-width:700px;
+      border-radius:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.2);
+      transition:0.4s;
+    }
+
+    .image-section img:hover{
+      transform:scale(1.03);
+    }
+
+    /* VOLUNTEER SECTION */
+
+    .volunteer{
+      text-align:center;
+      padding:70px 20px;
+      background:#f3e8ff;
+    }
+
+    .volunteer h2{
+      font-size:38px;
+      color:#5a189a;
+      margin-bottom:20px;
+    }
+
+    .volunteer p{
+      font-size:18px;
+      margin-bottom:30px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#240046;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .home-content h2{
+        font-size:34px;
+      }
+
+      .home-content p{
+        font-size:16px;
+      }
+
+      .about h2,
+      .volunteer h2{
+        font-size:30px;
+      }
+
+      nav ul{
+        gap:15px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <h1>She Can Foundation</h1>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#volunteer">Volunteer</a></li>
+    </ul>
+  </nav>
+
+  <!-- HOME -->
+
+  <section class="home" id="home">
+
+    <div class="home-content">
+
+      <h2>Empowering Women For A Better Tomorrow</h2>
+
+      <p>
+        She Can Foundation is dedicated to supporting women and students
+        through education, opportunities, and empowerment initiatives.
+        Together, we can create a brighter and stronger future.
+      </p>
+
+      <a href="#volunteer" class="btn">Join Us</a>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <h2>About Us</h2>
+
+    <p>
+      Our mission is to inspire confidence, leadership, and growth among
+      women and young learners. We believe every individual deserves
+      equal opportunities to learn, succeed, and make a difference in society.
+    </p>
+
+  </section>
+
+  <!-- IMAGE -->
+
+  <section class="image-section">
+
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216"
+         alt="Women Empowerment">
+
+  </section>
+
+  <!-- VOLUNTEER -->
+
+  <section class="volunteer" id="volunteer">
+
+    <h2>Become a Volunteer</h2>
+
+    <p>
+      Join our community and help us empower lives through education,
+      awareness, and support programs.
+    </p>
+
+    <a href="#" class="btn" onclick="showMessage()">Volunteer Now</a>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 She Can Foundation | Designed with ❤️ by Anumula Meghan</p>
+
+  </footer>
+
+  <script>
+
+    function showMessage(){
+      alert("Thank you for joining She Can Foundation!");
+    }
+
+  </script>
+
+</body>
+</html>
